@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Communicon</title>
+		<meta name="description" content="MVP - mathematical keyboard and functions for culculusI" />
+		<meta name="keywords" content="symbol, function, math, keyboard" />
+		<meta name="author" content="Communicon"/>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Top Navigation -->
+			<header>
+				<textarea id="txtarea" rows="4" cols="50" autofocus></textarea>
+				<script type="text/javascript">
+					function handleClick(obj){
+						alert(test);
+						var t = obj.innerText || obj.textContent;
+						$('#txtarea').html($('#txtarea').html() + 'test');
+					}
+				</script>
+				<script type="text/javascript">
+					function test(obj){
+						
+						var t = obj.innerText || obj.textContent;
+        				alert(t);
+        				$('#txtarea').val($('#txtarea').val() + t);
+        				
+    				}
+				</script>
+				<nav id="codrops-demos" class="codrops-demos">
+					<a href="#set-1">Greek</a>
+					<a href="#set-2">Algebra</a>
+					<a href="#set-3">Geometry</a>
+					<a href="#set-4">Calculus</a>
+					<a href="#set-5">Set</a>
+
+				</nav>
+			</header>
+			<section id="set-1">
+				<div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
+					<a href="#set-1" class="hi-icon hi-icon-mobile" onclick="test(this)">𝝰</a>
+					<a href="#set-1" class="hi-icon hi-icon-screen">𝝱</a>
+					<a href="#set-1" class="hi-icon hi-icon-earth">𝝲</a>
+					<a href="#set-1" class="hi-icon hi-icon-support">𝝳</a>
+					<a href="#set-1" class="hi-icon hi-icon-locked">𝝴</a>
+				</div>
+				<div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1b">
+					<a href="#set-1" class="hi-icon hi-icon-ro">𝝆</a>
+					<a href="#set-1" class="hi-icon hi-icon-omega">𝜴</a>
+					<a href="#set-1" class="hi-icon hi-icon-phi">𝜆</a>
+					<a href="#set-1" class="hi-icon hi-icon-yita">𝝶</a>
+					<a href="#set-1" class="hi-icon hi-icon-mu">𝜇</a>
+				</div>
+			</section>
+			<section id="set-2">
+				<div class="hi-icon-wrap hi-icon-effect-2 hi-icon-effect-2a">
+					<a href="#set-2" class="hi-icon hi-icon-cog">≤</a>
+					<a href="#set-2" class="hi-icon hi-icon-clock">≥</a>
+					<a href="#set-2" class="hi-icon hi-icon-videos">√</a>
+					<a href="#set-2" class="hi-icon hi-icon-list">∛</a>
+					<a href="#set-2" class="hi-icon hi-icon-refresh">∜</a>
+				</div>
+				<div class="hi-icon-wrap hi-icon-effect-2 hi-icon-effect-2b">
+					<a href="#set-2" class="hi-icon hi-icon-plusminus">∓</a>
+					
+				</div>
+			</section>
+			<section id="set-3">
+				<div class="hi-icon-wrap hi-icon-effect-3 hi-icon-effect-3a">
+					<a href="#set-3" class="hi-icon hi-icon-pencil">𝜃</a>
+					<a href="#set-3" class="hi-icon hi-icon-link">𝟂</a>
+					<a href="#set-3" class="hi-icon hi-icon-mail">𝝅</a>	
+				</div>
+				
+			</section>
+			<section id="set-4">
+				<div class="hi-icon-wrap hi-icon-effect-4 hi-icon-effect-4a">
+					<a href="#set-4" class="hi-icon hi-icon-archive">∫</a>
+					<a href="#set-4" class="hi-icon hi-icon-chat">∫∫</a>
+					<a href="#set-4" class="hi-icon hi-icon-bookmark">∫∫∫</a>
+					<a href="#set-4" class="hi-icon hi-icon-user">∂</a>
+					
+				</div>
+				<div class="hi-icon-wrap hi-icon-effect-4 hi-icon-effect-4b">
+					<a href="#set-4" class="hi-icon hi-icon-sum">∑</a>
+					<a href="#set-4" class="hi-icon hi-icon-wut">∐</a>
+					<a href="#set-4" class="hi-icon hi-icon-mult">∏</a>
+					<a href="#set-4" class="hi-icon hi-icon-delta">∆</a>
+					
+				</div>
+			</section>
+			<section id="set-5">
+				<div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5a">
+					<a href="#set-5" class="hi-icon hi-icon-subsetR">⊆</a>
+					<a href="#set-5" class="hi-icon hi-icon-subsetR">⊇</a>
+					<a href="#set-5" class="hi-icon hi-icon-notsubsetR">⊈</a>
+					<a href="#set-5" class="hi-icon hi-icon-notsubsetL">⊉</a>
+					<a href="#set-5" class="hi-icon hi-icon-propersetR">⊊</a>
+				</div>
+				<div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5b">
+					<a href="#set-5" class="hi-icon hi-icon-belongL">∋</a>
+					<a href="#set-5" class="hi-icon hi-icon-notbelongL">∌</a>
+					<a href="#set-5" class="hi-icon hi-icon-union">⋃</a>
+					<a href="#set-5" class="hi-icon hi-icon-intersection">⋂</a>
+					<a href="#set-5" class="hi-icon hi-icon-emptyset">∅</a>
+				</div>
+			</section>
+		</div><!-- /container -->
+		<script>
+			var hash = window.location.hash,
+				current = 0,
+				demos = Array.prototype.slice.call( document.querySelectorAll( '#codrops-demos > a' ) );
+			
+			if( hash === '' ) hash = '#set-1';
+			setDemo( demos[ parseInt( hash.match(/#set-(\d+)/)[1] ) - 1 ] );
+
+			demos.forEach( function( el, i ) {
+				el.addEventListener( 'click', function() { setDemo( this ); } );
+			} );
+
+			function setDemo( el ) {
+				var idx = demos.indexOf( el );
+				if( current !== idx ) {
+					var currentDemo = demos[ current ];
+					currentDemo.className = currentDemo.className.replace(new RegExp("(^|\\s+)" + 'current-demo' + "(\\s+|$)"), ' ');
+				}
+				current = idx;
+				el.className = 'current-demo'; 
+			}
+		</script>
+	</body>
+</html>

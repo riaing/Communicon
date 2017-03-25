@@ -1,0 +1,116 @@
+textarea {
+    margin-top:20px;
+    overflow: auto;
+    font-size: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+ #navigate_section {
+    opacity: 1;
+    color: #aaa;
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.6em 1em;
+    font-weight: 700;          
+}
+
+#navigate_section a {
+    text-decoration: none;
+    color: #aaa;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.6em 1em;
+    border: 3px solid #ddd;
+    font-weight: 700;
+}
+       
+.filter_symbols {
+    text-align: center;
+    color: #aaa;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+
+#Greek {
+    background: #41ab6b;
+}
+
+#Algebra {
+    background: #eea303
+}
+
+#Geometry {
+    background: #f06060;
+}
+
+#Calculus {
+    background: #0e83cd;
+}
+
+#Set {
+    background: #702fa8;
+}
+
+#Greek button:hover {
+    background:white;
+    color: #41ab6b;
+}
+
+#Geometry button:hover {
+    background:white;
+    color: #f06060;
+}
+
+#Algebra button:hover {
+    background:white;
+    color: #eea303;
+}
+
+#Calculus button:hover {
+    background:white;
+    color: #0e83cd;
+}
+
+#Set button:hover {
+    background:white;
+    color: #702fa8;
+}
+
+.Symbols_Section {
+    text-align: center;
+    margin: 0 auto;
+    padding: 2em 0 3em;
+    width: 50%;
+}
+
+button {
+    background: rgba(255,255,255,0.1); 
+    display: inline-block;
+    font-size: 40px;
+    /* cursor: pointer; */
+    /* margin: 15px 30px; */
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    margin: 20px;
+    border: 0px;
+    padding: 20px;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#navigate_section a:hover {
+    color:black;
+    border: 3px solid white;
+}
+
+#navigate_section a.current {
+    border: 3px solid #aaa;
+}

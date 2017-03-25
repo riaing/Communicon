@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<title>MVP</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="./css/style.css">
+
+<head>
+   <style>
+      
+   </style>
+</head>
+ 
+
+<body>
+    <div class="container" >
+        <textarea id="txtarea"></textarea>
+    </div>
+
+   
+    <div class="filter_symbols">
+        <nav id="navigate_section">
+            <a class="prepend_filter"  onclick="">Greek</a>
+            <a class="prepend_filter"  onclick="">Algebra</a>
+            <a class="prepend_filter" onclick="">Geometry</a>
+            <a class="prepend_filter"  onclick="">Calculus</a>
+            <a class="prepend_filter"  onclick="">Set</a>
+        </nav>
+    </div>
+
+    <div id="random"></div>
+
+    <section id="Greek">
+        <div class="Symbols_Section">
+            <button>𝝆</button>
+            <button>𝜴</button>
+            <button>𝜆</button>
+            <button>𝝶</button>
+            <button>𝜇</button>
+        </div>
+    </section>
+
+    <section id="Algebra">
+        <div class="Symbols_Section">
+            <button>≤</button>
+            <button>≥</button>
+            <button>√</button>
+            <button>∛</button>
+            <button>∜</button>
+            <button>∓</button>
+        </div>
+    </section>
+
+    <section id="Geometry">
+        <div class="Symbols_Section">
+            <button>𝜃</button>
+            <button>𝟂</button>
+            <button>𝝅</button>
+        </div>
+    </section>
+
+    <section id="Calculus">
+        <div class="Symbols_Section">
+            <button>∫</button>
+            <button>∫∫</button>
+            <button>∫∫∫</button>
+            <button>∂</button>
+            <button>∑</button>
+            <button>∐</button>
+            <button>∏</button>
+            <button>∆</button>
+           
+        </div>
+    </section>
+
+    <section id="Set">
+        <div class="Symbols_Section">
+            <button>⊆</button>
+            <button>⊇</button>
+            <button>⊈</button>
+            <button>⊉̸̸</button>
+            <button>⊊</button>
+            <button>∋</button>
+            <button>∌</button>
+            <button>⋃</button>
+            <button>⋂</button>
+            <button>∅</button>
+        </div>
+    </section>
+
+
+    <script>
+        //Moves the selected section to the top
+        $(".prepend_filter").on('click', function(event){  
+            var selectedArea = String(event.srcElement.innerHTML);
+            $(String("#" + selectedArea)).insertAfter($("#random"));
+        });
+    </script>
+
+
+	 <script>
+          //Highlights the current symbols section
+           $("a").click(function(event){
+              $('.current').removeClass('current');
+              event.srcElement.className = "current"
+            });
+    </script>
+
+
+    <script>  
+     //Inserts symbols into the textarea
+     $("button").click(function(event){
+         var content;
+         content =  $("#txtarea").val() + event.srcElement.innerHTML;
+         $("#txtarea").val(content);
+    });
+   </script>
+
+
+
+
+</body>
+</html> 
+
