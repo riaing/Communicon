@@ -39,7 +39,12 @@ textarea {
 }
 
 #Algebra {
-    background: #eea303
+    background: #87CEFA;
+}
+
+#Linear_Algebra{
+    background: #eea303;
+
 }
 
 #Geometry {
@@ -67,6 +72,11 @@ textarea {
 #Algebra button:hover {
     background:white;
     color: #eea303;
+}
+
+#Linear_Algebra button:hover {
+    background:white;
+    color:  #000000;
 }
 
 #Calculus button:hover {
