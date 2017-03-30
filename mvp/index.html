@@ -33,6 +33,17 @@
         <textarea id="txtarea"></textarea>
     </div>
 
+    <!-- adding new buttons  -->
+    <a href = "http://www.communicon.co"  class="btn btn-1 btn-1a" >Home</a>
+    <a class = "clear" onclick="" >Clear</a>
+    <button class="btn btn-primary" type="submit" >Tell us what you think! </button>
+
+    <button class="btn btn-primary" type="submit" >Subscribe to get updates! </button>
+
+    <div>
+
+    </div>
+
    
     <div class="filter_symbols">
         <nav id="navigate_section">
@@ -185,7 +196,7 @@
 
     <script>  
      //Inserts symbols into the textarea
-     $origin("button").click(function(event){
+     $origin(".Symbols_Section").click(function(event){
          var content;
          content =  $origin("#txtarea").val() + event.srcElement.innerHTML;
          $origin("#txtarea").val(content);
@@ -199,6 +210,15 @@
     $('[data-toggle="tooltip"]').tooltip();   
     });
 </script>
+
+  <script>  
+     //Inserts symbols into the textarea
+     $origin(".clear").click(function(event){
+         var content;
+         content = "";
+         $origin("#txtarea").val(content);
+    });
+   </script>
 
 
 
