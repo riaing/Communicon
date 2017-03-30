@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
 <title>MVP</title>
+
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- hoover -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<!-- hoover -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!-- add distinction to diffrent jQery -->
+<script  type="text/javascript"> var $origin = $.noConflict(true); </script>
+
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<!-- hoover -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- hoover -->
 <link rel="stylesheet" href="./css/style.css">
+
 
 <head>
    <style>
@@ -22,37 +36,109 @@
    
     <div class="filter_symbols">
         <nav id="navigate_section">
-            <a class="prepend_filter"  onclick="">Greek</a>
+           
             <a class="prepend_filter"  onclick="">Algebra</a>
-            <a class="prepend_filter" onclick="">Geometry</a>
+            <a class="prepend_filter"  onclick="">Linear_Algebra</a>
             <a class="prepend_filter"  onclick="">Calculus</a>
+             <a class="prepend_filter"  onclick="" >Greek</a>
+            <a class="prepend_filter" onclick="">Geometry</a>
             <a class="prepend_filter"  onclick="">Set</a>
         </nav>
     </div>
 
     <div id="random"></div>
-
-    <section id="Greek">
-        <div class="Symbols_Section">
-            <button>𝝆</button>
-            <button>𝜴</button>
-            <button>𝜆</button>
-            <button>𝝶</button>
-            <button>𝜇</button>
-        </div>
-    </section>
-
     <section id="Algebra">
         <div class="Symbols_Section">
-            <button>≤</button>
-            <button>≥</button>
-            <button>√</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="equivalence">≡</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="equal by definition">≜</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="approximately equal">~</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="approximately equal">≈</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="proportional to">∝</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="lemniscate">∞</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="much less than">≪</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="much greater than">≫</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="floor brackets">⌊x⌋</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="ceiling brackets">⌈x⌉</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="factorial">x!</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="absolute value">|x|</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="function of x">f(x)</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="function composition:
+            (f∘g) (x) = f (g(x))">(f∘g)</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="open interval: (a,b) = {x | a < x < b}">(a,b)</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="closed interval: [a,b] = {x | a ≤ x ≤ b}">[a,b]</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="delta">∆</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="capital pi: product">∏</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="squre root">√</button>
             <button>∛</button>
             <button>∜</button>
             <button>∓</button>
+            <button>≥</button>
+            
         </div>
     </section>
 
+       <section id="Linear_Algebra">
+        <div class="Symbols_Section">
+            <button data-toggle="tooltip" data-placement="bottom" title="dot">·</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="vector product">×</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="tensor product">A⊗B</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="determinant of matrix A">| A |</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="determinant of matrix A">det(A)</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="norm">|| x ||</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="transpose: (AT)ij = (A)ji">A T</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="Hermitian matrix: (A†)ij = (A)ji">A*</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="inverse matrix: A A-1 = I">A-1</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="matrix rank">rank(A)</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="dimension">dim(U)</button>
+        </div>
+    </section>
+
+     <section id="Calculus">
+        <div class="Symbols_Section">
+            <button data-toggle="tooltip" data-placement="bottom" title="epsilon: ε → 0">ε</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="derivative">y '</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="second derivative">y ''</button>
+            <button data-toggle="tooltip" data-placement="bottom" title=" nth derivative">y(n)</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="proportional to">dy/dx</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="integral">∫</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="double integral">∬</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="triple integral">∭</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="closed contour / line integral">∮</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="closed surface integral">∯</button>
+            <button data-toggle="tooltip" data-placement="bottom" title="closed volume integral">∰</button>
+        </div>
+    </section>
+
+
+    <section id="Greek">
+        <div class="Symbols_Section">
+            <button>α</button>
+            <button>β</button>
+            <button>γ</button>
+            <button>δ</button>
+            <button>ζ</button>
+            <button>η</button>
+            <button>θ</button>
+            <button>ι</button>
+            <button>κ</button>
+            <button>λ</button>
+            <button>μ</button>
+            <button>ν</button>
+            <button>ξ</button>
+            <button>ο</button>
+            <button>π</button>
+            <button>Σ</button>
+            <button>τ</button>
+            <button>υ</button>
+            <button>φ</button>
+            <button>χ</button>
+            <button>ψ</button>
+            <button>ω</button>
+        </div>
+    </section>
+
+
+    
     <section id="Geometry">
         <div class="Symbols_Section">
             <button>𝜃</button>
@@ -61,19 +147,7 @@
         </div>
     </section>
 
-    <section id="Calculus">
-        <div class="Symbols_Section">
-            <button>∫</button>
-            <button>∫∫</button>
-            <button>∫∫∫</button>
-            <button>∂</button>
-            <button>∑</button>
-            <button>∐</button>
-            <button>∏</button>
-            <button>∆</button>
-           
-        </div>
-    </section>
+   
 
     <section id="Set">
         <div class="Symbols_Section">
@@ -93,17 +167,17 @@
 
     <script>
         //Moves the selected section to the top
-        $(".prepend_filter").on('click', function(event){  
+        $origin(".prepend_filter").on('click', function(event){  
             var selectedArea = String(event.srcElement.innerHTML);
-            $(String("#" + selectedArea)).insertAfter($("#random"));
+            $origin(String("#" + selectedArea)).insertAfter($origin("#random"));
         });
     </script>
 
 
 	 <script>
           //Highlights the current symbols section
-           $("a").click(function(event){
-              $('.current').removeClass('current');
+           $origin("a").click(function(event){
+              $origin('.current').removeClass('current');
               event.srcElement.className = "current"
             });
     </script>
@@ -111,12 +185,20 @@
 
     <script>  
      //Inserts symbols into the textarea
-     $("button").click(function(event){
+     $origin("button").click(function(event){
          var content;
-         content =  $("#txtarea").val() + event.srcElement.innerHTML;
-         $("#txtarea").val(content);
+         content =  $origin("#txtarea").val() + event.srcElement.innerHTML;
+         $origin("#txtarea").val(content);
     });
    </script>
+
+
+   <!-- hoover code -->
+   <script>
+    $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+    });
+</script>
 
 
 
