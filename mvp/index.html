@@ -39,10 +39,13 @@
 
     <div class="container" >
         <textarea id="txtarea"></textarea>
+        <div id= "side-buttons">
+            <a id = "clear"  onclick="" >Clear</a> 
+            <a id = "selectAll"  onclick="select_all()" >Select All</a> 
+        </div>
     </div>
 
     <!-- can't change id"clear" below  -->
-    <a id = "clear"  onclick="" >Clear</a> 
     
 <div>
     
@@ -245,18 +248,20 @@
     });
 </script>
 
-  <script>  
+<script>  
      //Inserts symbols into the textarea
      $origin("#clear").click(function(event){
          var content;
          content = "";
          $origin("#txtarea").val(content);
     });
-   </script>
+</script>
 
-  
-
-
+<script type="text/javascript">
+      function select_all() {
+          $origin("#txtarea").select();
+      }      
+</script>
 
 
 </body>
