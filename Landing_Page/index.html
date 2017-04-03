@@ -72,46 +72,30 @@
             <a href="http://www.communicon.co/mvp/index.html" class="btn btn-1 btn-1a">Try Out Product</a>
              <button class="btn btn-1 btn-1a" data-toggle="modal" data-target="#myModal">Sign Up Mailing List</button>
 
+                     <!-- start: adding php  -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                 <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="text-primary">Sign up for free! </h2>
+                  </div>
 
-
-
-
-
-
-
-
-         <!-- start: adding php  -->
-         <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-     <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h2 class="text-primary">Sign up for free! </h2>
-      </div>
-      <div class="modal-body">
-
-        <form action="login.php" method="post" , id="nameform" >
-            <h4 class = "text-primary">E-mail</h4><input type="text" name="email",  class="form-control" id="usr"><br>
-            <!-- <input type="submit", class="text-primary">  -->
-        </form>
-
-        
-
-        <!-- The button below is outside the form element, but still part of the form -->
-        <button type="submit" form="nameform" value="Submit", class="text-primary" >Submit</button>    
-
-      </div>
-          
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
-      </div> -->
-    </div>
-
-
-</div>
-        <!-- end: adding php  -->
+                  <div class="modal-body">
+                    <form action="login.php" method="post" , id="nameform" >
+                        <h4 class = "text-primary">E-mail</h4><input type="text" name="email",  class="form-control" id="usr"><br>
+                        <!-- <input type="submit", class="text-primary">  -->
+                    </form>
+                    <!-- The button below is outside the form element, but still part of the form -->
+                    <button type="submit" form="nameform" value="Submit", class="text-primary" >Submit</button>
+                  </div>
+                  <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+                  </div> -->
+                </div>
+            </div>
+            <!-- end: adding php  -->
         </div>
     </header>
 
