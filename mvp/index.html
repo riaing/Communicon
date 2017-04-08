@@ -8,7 +8,7 @@
 <!-- hoover -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <!-- hoover -->
-
+<script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <!-- add distinction to diffrent jQery -->
 <script  type="text/javascript"> var $origin = $.noConflict(true); </script>
@@ -236,7 +236,12 @@
           //Highlights the current symbols section
            $origin("a").click(function(event){
               $origin('.current').removeClass('current');
+               if (jQuery.browser.mozilla) { 
+              console.log(event.target.className)
+               }
+               else{
               event.srcElement.className = "current"
+               }
             });
     </script>
 
@@ -244,9 +249,12 @@
     <script>  
      //Inserts symbols into the textarea
      $origin(".symbol").click(function(event){
-         // console.log(event.srcElement.childNodes[0].data)
          var content;
-         content =  $origin("#txtarea").val() + event.srcElement.childNodes[0].data;
+         if (jQuery.browser.mozilla) { 
+            content = $origin("#txtarea").val() + event.target.childNodes[0].data;;
+         }else{
+            content =  $origin("#txtarea").val() + event.srcElement.childNodes[0].data;
+         }
          $origin("#txtarea").val(content);
     });
    </script>
