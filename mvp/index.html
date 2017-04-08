@@ -226,7 +226,7 @@
     <script>
         //Moves the selected section to the top
         $origin(".prepend_filter").on('click', function(event){  
-            var selectedArea = String(event.srcElement.innerHTML);
+            var selectedArea = String(event.target.innerHTML);
             $origin(String("#" + selectedArea)).insertAfter($origin("#random"));
         });
     </script>
