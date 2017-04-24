@@ -22,6 +22,9 @@
 <!-- fonts -->
 <link href='//fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+
+
 <head>
     <style>
 
@@ -54,11 +57,16 @@
         <li style="float:right"><a data-toggle="modal" data-target="#myModal">Subscribe for Updates</a></li>
     </ul>
 
+
+
     <div class="container">
         <textarea id="txtarea"></textarea>
         <div id="side-buttons">
             <a id="clear" onclick="">Clear</a>
             <a id="selectAll" onclick="select_all()">Select All</a>
+            <button class="btn" data-clipboard-action="copy" data-clipboard-target="#txtarea">
+                Copy to clipboard
+            </button>
         </div>
     </div>
 
@@ -285,6 +293,38 @@
         function select_all() {
             $origin("#txtarea").select();
         }
+    </script>
+
+
+    <script>
+        // Handles the clipboard actions
+        $('button').tooltip({
+            trigger: 'click',
+            placement: 'bottom'
+        });
+
+        function setTooltip(message) {
+            $('button').tooltip('hide')
+                .attr('data-original-title', message)
+                .tooltip('show');
+        }
+
+        function hideTooltip() {
+            setTimeout(function() {
+                $('button').tooltip('hide');
+            }, 1000);
+        }
+
+        var clipboard = new Clipboard('.btn');
+        clipboard.on('success', function(e) {
+            setTooltip('Copied!');
+            hideTooltip();
+        });
+
+        clipboard.on('error', function(e) {
+            setTooltip('Failed!');
+            hideTooltip();
+        });
     </script>
 
 
