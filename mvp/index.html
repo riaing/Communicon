@@ -3,267 +3,334 @@
 <title>MVP</title>
 
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name=viewport content='width=700'>
 <!-- hoover -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <!-- hoover -->
-
+<script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <!-- add distinction to diffrent jQery -->
-<script  type="text/javascript"> var $origin = $.noConflict(true); </script>
-
+<script type="text/javascript">
+    var $origin = $.noConflict(true);
+</script>
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 <!-- hoover -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- hoover -->
 <link rel="stylesheet" href="./css/style.css">
-
 <!-- fonts -->
 <link href='//fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+
+
 <head>
-   <style>
-      
-   </style>
+    <style>
+
+    </style>
 </head>
- 
+
+
+<script>
+    // Handles the Google Analytics in the Page
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-96765642-1', 'auto');
+    ga('send', 'pageview');
+</script>
 
 <body>
-    <ul id= "navigation">
+    <ul id="navigation">
         <li><a href="http://www.communicon.co">Home</a></li>
-        <li style="float:right"><a href ="https://docs.google.com/forms/d/e/1FAIpQLSeNFyc6dge5oe4-LlL2eG9a8r7aamoXw6zRYZxJU0wbzc0gNA/viewform?usp=sf_link" >Tell us what you think!</a></li>
+        <!-- TODO replace # with the actual links-->
+        <li><a href="../Math-Class-Search/index.html">Class Intro</a></li>
+        <li><a href="#">Finding a Mentor</a></li>
+        <li style="float:right"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeNFyc6dge5oe4-LlL2eG9a8r7aamoXw6zRYZxJU0wbzc0gNA/viewform?usp=sf_link">Tell us what you think!</a></li>
         <li style="float:right"><a data-toggle="modal" data-target="#myModal">Subscribe for Updates</a></li>
     </ul>
 
-    <div class="container" >
+
+
+    <div class="container">
         <textarea id="txtarea"></textarea>
-        <div id= "side-buttons">
-            <a id = "clear"  onclick="" >Clear</a> 
-            <a id = "selectAll"  onclick="select_all()" >Select All</a> 
+        <div id="side-buttons">
+            <a id="clear" onclick="">Clear</a>
+            <a id="selectAll" onclick="select_all()">Select All</a>
+            <button class="btn" data-clipboard-action="copy" data-clipboard-target="#txtarea">
+                Copy to clipboard
+            </button>
         </div>
     </div>
 
     <!-- can't change id"clear" below  -->
-    
-<div>
-    
- </div> 
+
+    <div>
+
+    </div>
 
 
-   
+
     <div class="filter_symbols">
         <nav id="navigate_section">
-           
-            <a class="prepend_filter"  onclick="">Algebra</a>
-            <a class="prepend_filter"  onclick="">Linear_Algebra</a>
-            <a class="prepend_filter"  onclick="">Calculus</a>
-             <a class="prepend_filter"  onclick="" >Greek</a>
+
+            <a class="prepend_filter" onclick="">Algebra</a>
+            <a class="prepend_filter" onclick="">Linear_Algebra</a>
+            <a class="prepend_filter" onclick="">Calculus</a>
+            <a class="prepend_filter" onclick="">Greek</a>
             <a class="prepend_filter" onclick="">Geometry</a>
-            <a class="prepend_filter"  onclick="">Set</a>
+            <a class="prepend_filter" onclick="">Set</a>
         </nav>
     </div>
 
     <div id="random"></div>
     <section id="Algebra">
         <div class="Symbols_Section">
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="equivalence">≡</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="equal by definition">≜</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="approximately equal">~</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="approximately equal">≈</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="proportional to">∝</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="lemniscate">∞</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="much less than">≪</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="much greater than">≫</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="floor brackets">⌊x⌋</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="ceiling brackets">⌈x⌉</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="factorial">x!</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="absolute value">|x|</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="function of x">f(x)</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="function composition:
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="equivalence">≡</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="equal by definition">≜</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="approximately equal">~</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="approximately equal">≈</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="proportional to">∝</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="lemniscate">∞</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="much less than">≪</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="much greater than">≫</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="floor brackets">⌊x⌋</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="ceiling brackets">⌈x⌉</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="factorial">x!</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="absolute value">|x|</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="function of x">f(x)</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="function composition:
             (f∘g) (x) = f (g(x))">(f∘g)</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="open interval: (a,b) = {x | a < x < b}">(a,b)</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="closed interval: [a,b] = {x | a ≤ x ≤ b}">[a,b]</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="delta">∆</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="capital pi: product">∏</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="squre root">√</button>
-            <button class ="symbol" >∛</button>
-            <button class ="symbol" >∜</button>
-            <button class ="symbol" >∓</button>
-            <button class ="symbol" >≥</button>
-            
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="open interval: (a,b) = {x | a < x < b}">(a,b)</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="closed interval: [a,b] = {x | a ≤ x ≤ b}">[a,b]</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="delta">∆</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="capital pi: product">∏</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="squre root">√</button>
+            <button class="symbol">∛</button>
+            <button class="symbol">∜</button>
+            <button class="symbol">∓</button>
+            <button class="symbol">≥</button>
+
         </div>
     </section>
 
-       <section id="Linear_Algebra">
+    <section id="Linear_Algebra">
         <div class="Symbols_Section">
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="dot">·</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="vector product">×</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="tensor product">A⊗B</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="determinant of matrix A">| A |</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="determinant of matrix A">det(A)</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="norm">|| x ||</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="transpose: (AT)ij = (A)ji">A T</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="Hermitian matrix: (A†)ij = (A)ji">A*</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="inverse matrix: A A-1 = I">A-1</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="matrix rank">rank(A)</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="dimension">dim(U)</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="dot">·</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="vector product">×</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="tensor product">A⊗B</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="determinant of matrix A">| A |</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="determinant of matrix A">det(A)</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="norm">|| x ||</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="transpose: (AT)ij = (A)ji">A T</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="Hermitian matrix: (A†)ij = (A)ji">A*</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="inverse matrix: A A-1 = I">A-1</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="matrix rank">rank(A)</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="dimension">dim(U)</button>
         </div>
     </section>
 
-     <section id="Calculus">
+    <section id="Calculus">
         <div class="Symbols_Section">
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="epsilon: ε → 0">ε</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="derivative">y '</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="second derivative">y ''</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title=" nth derivative">y(n)</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="proportional to">dy/dx</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="integral">∫</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="double integral">∬</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="triple integral">∭</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="closed contour / line integral">∮</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="closed surface integral">∯</button>
-            <button class ="symbol" data-toggle="tooltip" data-placement="bottom" title="closed volume integral">∰</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="epsilon: ε → 0">ε</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="derivative">y '</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="second derivative">y ''</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title=" nth derivative">y(n)</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="proportional to">dy/dx</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="integral">∫</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="double integral">∬</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="triple integral">∭</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="closed contour / line integral">∮</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="closed surface integral">∯</button>
+            <button class="symbol" data-toggle="tooltip" data-placement="bottom" title="closed volume integral">∰</button>
         </div>
     </section>
 
 
     <section id="Greek">
         <div class="Symbols_Section">
-            <button class ="symbol" >α</button>
-            <button class ="symbol" >β</button>
-            <button class ="symbol" >γ</button>
-            <button class ="symbol" >δ</button>
-            <button class ="symbol" >ζ</button>
-            <button class ="symbol" >η</button>
-            <button class ="symbol" >θ</button>
-            <button class ="symbol" >ι</button>
-            <button class ="symbol" >κ</button>
-            <button class ="symbol" >λ</button>
-            <button class ="symbol" >μ</button>
-            <button class ="symbol" >ν</button>
-            <button class ="symbol" >ξ</button>
-            <button class ="symbol" >ο</button>
-            <button class ="symbol" >π</button>
-            <button class ="symbol" >Σ</button>
-            <button class ="symbol" >τ</button>
-            <button class ="symbol" >υ</button>
-            <button class ="symbol" >φ</button>
-            <button class ="symbol" >χ</button>
-            <button class ="symbol" >ψ</button>
-            <button class ="symbol" >ω</button>
+            <button class="symbol">α</button>
+            <button class="symbol">β</button>
+            <button class="symbol">γ</button>
+            <button class="symbol">δ</button>
+            <button class="symbol">ζ</button>
+            <button class="symbol">η</button>
+            <button class="symbol">θ</button>
+            <button class="symbol">ι</button>
+            <button class="symbol">κ</button>
+            <button class="symbol">λ</button>
+            <button class="symbol">μ</button>
+            <button class="symbol">ν</button>
+            <button class="symbol">ξ</button>
+            <button class="symbol">ο</button>
+            <button class="symbol">π</button>
+            <button class="symbol">Σ</button>
+            <button class="symbol">τ</button>
+            <button class="symbol">υ</button>
+            <button class="symbol">φ</button>
+            <button class="symbol">χ</button>
+            <button class="symbol">ψ</button>
+            <button class="symbol">ω</button>
         </div>
     </section>
 
 
-    
+
     <section id="Geometry">
         <div class="Symbols_Section">
-            <button class ="symbol" >𝜃</button>
-            <button class ="symbol" >𝟂</button>
-            <button class ="symbol" >𝝅</button>
+            <button class="symbol">𝜃</button>
+            <button class="symbol">𝟂</button>
+            <button class="symbol">𝝅</button>
         </div>
     </section>
 
-   
+
 
     <section id="Set">
         <div class="Symbols_Section">
-            <button class ="symbol" >⊆</button>
-            <button class ="symbol" >⊇</button>
-            <button class ="symbol" >⊈</button>
-            <button class ="symbol" >⊉̸̸</button>
-            <button class ="symbol" >⊊</button>
-            <button class ="symbol" >∋</button>
-            <button class ="symbol" >∌</button>
-            <button class ="symbol" >⋃</button>
-            <button class ="symbol" >⋂</button>
-            <button class ="symbol" >∅</button>
+            <button class="symbol">⊆</button>
+            <button class="symbol">⊇</button>
+            <button class="symbol">⊈</button>
+            <button class="symbol">⊉̸̸</button>
+            <button class="symbol">⊊</button>
+            <button class="symbol">∋</button>
+            <button class="symbol">∌</button>
+            <button class="symbol">⋃</button>
+            <button class="symbol">⋂</button>
+            <button class="symbol">∅</button>
         </div>
 
 
 
-         <!-- start: adding php  -->
-            <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                 <!-- Modal content-->
+        <!-- start: adding php  -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <button id="close" type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="text-primary">Sign up for free! </h2>
-                  </div>
+                    <div class="modal-header">
+                        <button id="close" type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="text-primary">Sign up for free! </h2>
+                    </div>
 
-                  <div class="modal-body">
-                    <form action="login.php" method="post" , id="nameform" >
-                        <h4 class = "text-primary">E-mail</h4><input type="text" name="email",  class="form-control" id="usr"><br>
-                        <!-- <input type="submit", class="text-primary">  -->
-                    </form>
-                    <!-- The button below is outside the form element, but still part of the form -->
-                    <!-- fix-->
-                    <button type="submit" form="nameform" value="Submit", class="text-primary text-center" >Submit</button>
-                  </div>
-            
+                    <div class="modal-body">
+                        <form action="login.php" method="post" , id="nameform">
+                            <h4 class="text-primary">E-mail</h4><input type="text" name="email" , class="form-control" id="usr"><br>
+                            <!-- <input type="submit", class="text-primary">  -->
+                        </form>
+                        <!-- The button below is outside the form element, but still part of the form -->
+                        <!-- fix-->
+                        <button type="submit" form="nameform" value="Submit" , class="text-primary text-center">Submit</button>
+                    </div>
+
                 </div>
             </div>
-            <!-- end: adding php  -->  
+            <!-- end: adding php  -->
 
-    
+
     </section>
 
 
     <script>
         //Moves the selected section to the top
-        $origin(".prepend_filter").on('click', function(event){  
-            var selectedArea = String(event.srcElement.innerHTML);
+        $origin(".prepend_filter").on('click', function(event) {
+            var selectedArea = String(event.target.innerHTML);
             $origin(String("#" + selectedArea)).insertAfter($origin("#random"));
         });
     </script>
 
 
-	 <script>
-          //Highlights the current symbols section
-           $origin("a").click(function(event){
-              $origin('.current').removeClass('current');
-              event.srcElement.className = "current"
-            });
+    <script>
+        //Highlights the current symbols section
+        $origin("a").click(function(event) {
+            $origin('.current').removeClass('current');
+            if (jQuery.browser.mozilla) {
+                console.log(event.target.className)
+            } else {
+                event.srcElement.className = "current"
+            }
+        });
     </script>
 
 
-    <script>  
-     //Inserts symbols into the textarea
-     $origin(".symbol").click(function(event){
-         // console.log(event.srcElement.childNodes[0].data)
-         var content;
-         content =  $origin("#txtarea").val() + event.srcElement.childNodes[0].data;
-         $origin("#txtarea").val(content);
-    });
-   </script>
+    <script>
+        //Inserts symbols into the textarea
+        $origin(".symbol").click(function(event) {
+            var content;
+            if (jQuery.browser.mozilla) {
+                content = $origin("#txtarea").val() + event.target.childNodes[0].data;;
+            } else {
+                content = $origin("#txtarea").val() + event.srcElement.childNodes[0].data;
+            }
+            $origin("#txtarea").val(content);
+        });
+    </script>
 
 
-   <!-- hoover code -->
-   <script>
-    $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();   
-    });
-</script>
+    <!-- hover code-->
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
-<script>  
-     //Inserts symbols into the textarea
-     $origin("#clear").click(function(event){
-         var content;
-         content = "";
-         $origin("#txtarea").val(content);
-    });
-</script>
+    <script>
+        //Inserts symbols into the textarea
+        $origin("#clear").click(function(event) {
+            var content;
+            content = "";
+            $origin("#txtarea").val(content);
+        });
+    </script>
 
-<script type="text/javascript">
-      function select_all() {
-          $origin("#txtarea").select();
-      }      
-</script>
+    <script type="text/javascript">
+        function select_all() {
+            $origin("#txtarea").select();
+        }
+    </script>
+
+
+    <script>
+        // Handles the clipboard actions
+        $('button').tooltip({
+            trigger: 'click',
+            placement: 'bottom'
+        });
+
+        function setTooltip(message) {
+            $('button').tooltip('hide')
+                .attr('data-original-title', message)
+                .tooltip('show');
+        }
+
+        function hideTooltip() {
+            setTimeout(function() {
+                $('button').tooltip('hide');
+            }, 1000);
+        }
+
+        var clipboard = new Clipboard('.btn');
+        clipboard.on('success', function(e) {
+            setTooltip('Copied!');
+            hideTooltip();
+        });
+
+        clipboard.on('error', function(e) {
+            setTooltip('Failed!');
+            hideTooltip();
+        });
+    </script>
 
 
 </body>
-</html> 
 
+</html>

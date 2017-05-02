@@ -6,11 +6,11 @@
     background-color: #333;
 }
 
-#navigation li{
+#navigation li {
     color: white;
     float: left;
-    border-right:1px solid #bbb;
-    border-left:1px solid #bbb;
+    border-right: 1px solid #bbb;
+    border-left: 1px solid #bbb;
     text-decoration: none;
 }
 
@@ -34,7 +34,7 @@
     display: inline-block;
     margin: 0.5em;
     padding: 0.1em 20em;
-    font-weight: 700;      
+    font-weight: 700;
 }
 
 #side-buttons a {
@@ -46,16 +46,15 @@
     padding: 0.2em .3em;
     border: 3px solid #ddd;
     font-weight: 700;
-
 }
 
 #side-buttons a:hover {
-    color:black;
+    color: black;
     border: 3px solid white;
 }
 
 textarea {
-    margin-top:20px;
+    margin-top: 20px;
     overflow: auto;
     font-size: 40px;
     display: block;
@@ -64,13 +63,13 @@ textarea {
     border-radius: 20px;
 }
 
- #navigate_section {
+#navigate_section {
     opacity: 1;
     color: #aaa;
     display: inline-block;
     margin: 0.5em;
     padding: 0.6em 1em;
-    font-weight: 700;          
+    font-weight: 700;
 }
 
 #navigate_section a {
@@ -83,7 +82,7 @@ textarea {
     border: 3px solid #ddd;
     font-weight: 700;
 }
-       
+
 .filter_symbols {
     text-align: center;
     color: #aaa;
@@ -98,9 +97,8 @@ textarea {
     background: #87CEFA;
 }
 
-#Linear_Algebra{
+#Linear_Algebra {
     background: #eea303;
-
 }
 
 #Geometry {
@@ -116,32 +114,32 @@ textarea {
 }
 
 #Greek button:hover {
-    background:white;
+    background: white;
     color: #41ab6b;
 }
 
 #Geometry button:hover {
-    background:white;
+    background: white;
     color: #f06060;
 }
 
 #Algebra button:hover {
-    background:white;
+    background: white;
     color: #eea303;
 }
 
 #Linear_Algebra button:hover {
-    background:white;
-    color:  #000000;
+    background: white;
+    color: #000000;
 }
 
 #Calculus button:hover {
-    background:white;
+    background: white;
     color: #0e83cd;
 }
 
 #Set button:hover {
-    background:white;
+    background: white;
     color: #702fa8;
 }
 
@@ -153,7 +151,7 @@ textarea {
 }
 
 button {
-    background: rgba(255,255,255,0.1); 
+    background: rgba(255, 255, 255, 0.1);
     display: inline-block;
     font-size: 40px;
     /* cursor: pointer; */
@@ -173,10 +171,21 @@ body {
 }
 
 #navigate_section a:hover {
-    color:black;
+    color: black;
     border: 3px solid white;
 }
 
 #navigate_section a.current {
     border: 3px solid #aaa;
+}
+
+.btn {
+    text-decoration: none;
+    color: #aaa;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.2em .3em;
+    border: 3px solid #ddd;
+    font-weight: 700;
 }
