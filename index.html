@@ -19,7 +19,7 @@
 
     <!-- Button CSS -->
     <link rel="stylesheet" type="text/css" href="css/default.css" />
-	<link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -32,44 +32,48 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<style>
-    .fa-flask:before {
-    content: "?";
-    font-size: 75px;
-    font-weight: bold;
-    } 
-
-    #try_it{
-        color:white;
-    }
-
-     #try_it:hover{
-        color:#337ab7;
-        text-decoration: none;
-    }
-
-    #try_it:hover {
-        color:#337ab7;
-    }
-
-    #navigation {
-        margin: -1px;
-    }
-  
-
-</style>
+    <style>
+        .fa-flask:before {
+            content: "?";
+            font-size: 75px;
+            font-weight: bold;
+        }
+        
+        #try_it {
+            color: white;
+        }
+        
+        #try_it:hover {
+            color: #337ab7;
+            text-decoration: none;
+        }
+        
+        #try_it:hover {
+            color: #337ab7;
+        }
+        
+        #navigation {
+            margin: -1px;
+        }
+    </style>
 
 </head>
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-96765642-1', 'auto');
-  ga('send', 'pageview');
-
+    ga('create', 'UA-96765642-1', 'auto');
+    ga('send', 'pageview');
 </script>
 
 <body>
@@ -80,22 +84,22 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Communicon</a>
+                <a href="#top" onclick=$( "#menu-close").click();>Communicon</a>
             </li>
             <li>
-                <a href="#top" onclick=$("#menu-close").click();>Home</a>
-            </li>
-             <li>
-                <a href="#about" onclick=$("#menu-close").click();>About</a>
+                <a href="#top" onclick=$( "#menu-close").click();>Home</a>
             </li>
             <li>
-                <a href="#services" onclick=$("#menu-close").click();>Services</a>
+                <a href="#about" onclick=$( "#menu-close").click();>About</a>
             </li>
             <li>
-                <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+                <a href="#services" onclick=$( "#menu-close").click();>Services</a>
             </li>
             <li>
-                 <a href="#about", data-toggle="modal" data-target="#myModal">Sign Up</a>
+                <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
+            </li>
+            <li>
+                <a href="#about" , data-toggle="modal" data-target="#myModal">Sign Up</a>
             </li>
         </ul>
     </nav>
@@ -103,37 +107,37 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Equations & Symbols Anytime Anywhere</h1>
+            <h1>Symbols Anytime Anywhere</h1>
             <h3>A scientific keyboard to facilitate efficient communication on science subjects.</h3>
             <br>
             <a href="./mvp/index.html" class="btn btn-1 btn-1a">Try Our Product</a>
-            
 
-                     <!-- start: adding php  -->
+
+            <!-- start: adding php  -->
             <div id="myModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
-                 <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="text-primary">Sign up for free! </h2>
-                  </div>
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="text-primary">Sign up for free! </h2>
+                        </div>
 
-                  <div class="modal-body">
-                    <form action="login.php" method="post" , id="nameform" >
-                        <h4 class = "text-primary">E-mail</h4><input type="text" name="email",  class="form-control" id="usr"><br>
-                        <!-- <input type="submit", class="text-primary">  -->
-                    </form>
-                    <!-- The button below is outside the form element, but still part of the form -->
-                    <button type="submit" form="nameform" value="Submit", class="text-primary" >Submit</button>
-                  </div>
-                  <!-- <div class="modal-footer">
+                        <div class="modal-body">
+                            <form action="login.php" method="post" , id="nameform">
+                                <h4 class="text-primary">E-mail</h4><input type="text" name="email" , class="form-control" id="usr"><br>
+                                <!-- <input type="submit", class="text-primary">  -->
+                            </form>
+                            <!-- The button below is outside the form element, but still part of the form -->
+                            <button type="submit" form="nameform" value="Submit" , class="text-primary">Submit</button>
+                        </div>
+                        <!-- <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
                   </div> -->
+                    </div>
                 </div>
+                <!-- end: adding php  -->
             </div>
-            <!-- end: adding php  -->
-        </div>
     </header>
 
     <!-- Services -->
@@ -158,7 +162,7 @@
                                 <a href="./mvp/index.html" class="btn btn-light">Try it!</a>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
@@ -166,10 +170,13 @@
                                 <i class="fa fa-flask fa-stack-1x text-primary"></i>
                                 </span>
                                 <h4>
-                                    <strong >Ask a Question</strong>
+                                    <strong>Ask a Question</strong>
                                 </h4>
                                 <p>Submit a photo of your problem and we will give you hints on how to solve it!</p>
+
                                 <a href="./tutor/index.html" class="btn btn-light" >Try it!</a>
+                                
+
                                 
                             </div>
                         </div>
@@ -260,8 +267,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
+
                     <h3>Our MVP V4 has comed out!</h3>
                      <button class="btn btn-1 btn-1a" data-toggle="modal" data-target="#myModal">Sign Up Mailing List</button>
+
                 </div>
             </div>
         </div>
@@ -299,76 +308,76 @@
 
     <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
                 }
             }
         });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
-    // Disable Google Maps scrolling
-    // See http://stackoverflow.com/a/25904582/1607849
-    // Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-    var onMapClickHandler = function(event) {
+        // Disable Google Maps scrolling
+        // See http://stackoverflow.com/a/25904582/1607849
+        // Disable scroll zooming and bind back the click event
+        var onMapMouseleaveHandler = function(event) {
             var that = $(this);
-            // Disable the click handler until the user leaves the map area
-            that.off('click', onMapClickHandler);
-            // Enable scrolling zoom
-            that.find('iframe').css("pointer-events", "auto");
-            // Handle the mouse leave event
-            that.on('mouseleave', onMapMouseleaveHandler);
+            that.on('click', onMapClickHandler);
+            that.off('mouseleave', onMapMouseleaveHandler);
+            that.find('iframe').css("pointer-events", "none");
         }
-        // Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
+        var onMapClickHandler = function(event) {
+                var that = $(this);
+                // Disable the click handler until the user leaves the map area
+                that.off('click', onMapClickHandler);
+                // Enable scrolling zoom
+                that.find('iframe').css("pointer-events", "auto");
+                // Handle the mouse leave event
+                that.on('mouseleave', onMapMouseleaveHandler);
+            }
+            // Enable map zooming with mouse scroll when the user clicks the map
+        $('.map').on('click', onMapClickHandler);
     </script>
 
 </body>
